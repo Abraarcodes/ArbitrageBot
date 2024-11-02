@@ -25,28 +25,33 @@ Follow the steps below to set up and run the Arbitrage Bot:
 
    ```bash
    git clone https://github.com/Abraarcodes/ArbitrageBot.git
+Navigate to the Project Directory: Change into the project directory by running:
 
-2. **Navigate to the Project Directory**: Change into the project directory by running:
+bash
+Copy code
+cd ArbitrageBot
+Create a Virtual Environment: Create a virtual environment using the following command:
 
-   ```bash
-   cd ArbitrageBot
+bash
+Copy code
+python -m venv venv
+Activate the Virtual Environment: Activate the virtual environment:
 
-3.**Create a Virtual Environment**: Create a virtual environment using the following command:
+On Windows:
+bash
+Copy code
+venv\Scripts\Activate
+On macOS/Linux:
+bash
+Copy code
+source venv/bin/activate
+Install Dependencies: Install the required packages listed in requirements.txt by executing:
 
-   ```bash
-   python -m venv venv
+bash
+Copy code
+pip install -r requirements.txt
+Run the Application: Start the application with the following command:
 
-4.**Activate the Virtual Environment**:
-
-   ```bash
-   venv\Scripts\Activate
-
-5.**Install Dependencies**: Install the required packages listed in requirements.txt by executing:
-
-   ```bash
-   pip install -r requirements.txt
-
-6.**Run the Application**: Start the application with the following command:
-
-   ```bash
-   python run.py
+bash
+Copy code
+python run.py

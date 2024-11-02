@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #333399;
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+            background: linear-gradient(to right, #333399, #ff00cc); 
+        }
+
+        nav {
+            background: #333399; 
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+            background: linear-gradient(to right, #333399, #ff00cc); 
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff00cc;
+        }
+
+        .container {
+            max-width: 700px;
+            max-height: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        #dashboardTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        #dashboardTable th, #dashboardTable td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #dashboardTable th {
+            background-color: #333399;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="bg-nav">
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/home.html">Home</a>
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/pricing.html">Pricing</a>
+        <a href="http://127.0.0.1:5000">Bot</a>
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align: center;">Dashboard</h1>
+        <table id="dashboardTable" border="1">
+          
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

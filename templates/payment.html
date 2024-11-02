@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Payment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #333399;
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+            background: linear-gradient(to right, #333399, #ff00cc); 
+        }
+
+        nav {
+            background: #333399; 
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+            background: linear-gradient(to right, #333399, #ff00cc); 
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff00cc;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .payment-form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .success-message {
+            text-align: center;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="http://127.0.0.1:5500/arbitrage-bot//templates/home.html">Home</a>
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/pricing.html">Pricing</a>
+        <a href="http://127.0.0.1:5000">Bot</a>
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/dashboard.html">Dashboard</a>
+    </nav>
+    <h2 class="text-center" style="margin: 25px;">Make Your Payment</h2>
+    <div class="container">
+        <form class="payment-form" onsubmit="handlePayment(event)">
+            <div class="form-group">
+                <label for="cryptoType">Select Cryptocurrency:</label>
+                <select class="form-control" id="cryptoType" required>
+                    <option value="bitcoin">Bitcoin (BTC)</option>
+                    <option value="ethereum">Ethereum (ETH)</option>
+                    <option value="ethereum">ReEstate Coin (REC)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount">Enter Amount:</label>
+                <input type="number" class="form-control" id="amount" placeholder="Amount in USD" required>
+            </div>
+            <div class="form-group">
+                <label for="walletAddress">Enter Wallet Address:</label>
+                <input type="text" class="form-control" id="walletAddress" placeholder="Recipient's Wallet Address" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Proceed to Payment</button>
+        </form>
+
+        <div id="successMessage" class="success-message" style="display:none;">
+            Payment Successful!
+        </div>
+    </div>
+
+    <script>
+        // Function to get query parameters from URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Function to handle payment
+        function handlePayment(event) {
+            event.preventDefault();
+            
+            // Retrieve amount from URL
+            const amount = getQueryParam('amount');
+            
+            // Set the amount in the input field
+            document.getElementById('amount').value = amount;
+
+            // Add your payment processing logic here
+
+            // Display success message
+            document.getElementById("successMessage").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

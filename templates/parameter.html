@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbitrage Bot</title>
+   
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #333399; 
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+            background: linear-gradient(to right, #333399, #ff00cc);
+        }
+
+        nav {
+            padding: 1% 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 28px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff00cc;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="display: flex;flex-direction: column;">
+    <nav>
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/home.html">Home</a>
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/pricing.html">Pricing</a>
+        <a href="http://127.0.0.1:5000">Bot</a>
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/dashboard.html">Dashboard</a>
+    </nav>
+    <p style="font-size: 30px;color: aqua;">Start The Bot</p>
+    <form action="{{ url_for("index") }}" method="post">
+        <label for="mode">Mode:</label>
+        <input type="text" id="mode" name="mode" required>
+
+        <label for="renew">Renew Time:</label>
+        <input type="text" id="renew" name="renew" required>
+
+        <label for="balance">Balance:</label>
+        <input type="text" id="balance" name="balance" required>
+
+        <label for="symbol">Symbol:</label>
+        <input type="text" id="symbol" name="symbol" required>
+
+        <label for="ex_list">Exchanges List:</label>
+        <input type="text" id="ex_list" name="ex_list" required>
+        
+        <p><input type="submit" value="Start Bot"></p>
+    </form >
+</body>
+</html>

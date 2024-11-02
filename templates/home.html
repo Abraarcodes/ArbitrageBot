@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #333399;
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+            background: linear-gradient(to right, #333399, #ff00cc); 
+        }
+
+        nav {
+            background: #333399; 
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+            background: linear-gradient(to right, #333399, #ff00cc); 
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff00cc;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 600px; 
+            height: 500px; 
+            text-align: center;
+            font-size: 18px; 
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ff00cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #333399;
+        }
+    </style>
+    <title>Home</title>
+</head>
+<body>
+
+<nav>
+    <a href="http://127.0.0.1:5500/arbitrage-bot/templates/home.html">Home</a>
+    <a href="http://127.0.0.1:5500/arbitrage-bot/templates/pricing.html">Pricing</a>
+    <a href="http://127.0.0.1:5000">Bot</a>
+    <a href="http://127.0.0.1:5500/arbitrage-bot/templates/dashboard.html">Dashboard</a>
+</nav>
+<div class="container">
+    <div class="card">
+        <h2 style="font-size: 40px;">🚀 Launch Your Dreams with Crowdfunding! 🌟</h2>
+        <p style="font-size: 24px;">
+            Are you ready to turn your wildest dreams into reality? Start your crowdfunding journey
+            today and experience the magic of community support. Whether it's a creative project,
+            a business venture, or a passion project, we've got you covered. Get ready for success!
+        </p>
+        <a href="#" class="button">Start Your Adventure</a>
+    </div>
+    <div class="card">
+        <h2 style="font-size: 40px;">💰 Unlock Profits with Arbitrage Bot! 💼</h2>
+        <p style="font-size: 24px;">
+            Dive into the world of automated trading with our state-of-the-art Arbitrage Bot.
+            Capitalize on market price differences and watch your profits soar. Don't miss out on
+            this opportunity to level up your trading game. Your success story begins here!
+        </p>
+        <a href="http://127.0.0.1:5500/arbitrage-bot/templates/pricing.html" class="button">Start Making Profits</a>
+    </div>
+</div>
+
+</body>
+</html>
